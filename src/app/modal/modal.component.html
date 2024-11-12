@@ -1,0 +1,15 @@
+<div class="padre">
+
+  <div>
+
+    <button class="close" type="button" (click)="cerrarModal">X</button>
+
+    <h2>{{pokemon?.nombre}}</h2>
+    <img src="{{pokemon?.image_url}}" alt="">
+    <p>{{pokemon?.descripcion}}</p>
+  </div>
+
+</div>
+
+<app-modal *ngIf="cerrarElModal()"></app-modal>
+

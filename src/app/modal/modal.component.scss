@@ -1,0 +1,53 @@
+.padre {
+  &, * {
+    box-sizing: border-box;
+  }
+
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgb(5, 4, 7, 0.8);
+
+  div {
+    width: 90%;
+    background-color: white;
+    margin: 80px auto;
+    position: relative;
+    padding: 20px 15px;
+
+    butto.close {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+    }
+
+    h2 {
+      width: 100%;
+      margin: 15px 0 10px;
+      border-bottom: 1px solid lightblue;
+      padding-bottom: 5px;
+    }
+
+    img {
+      width: 20%;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    button.button-close {
+      width: 100%;
+      outline: none;
+      padding: 5px 15px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 1px 2px #242424;
+      cursor: pointer;
+    }
+
+  }
+
+
+}

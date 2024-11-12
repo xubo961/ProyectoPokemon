@@ -1,0 +1,39 @@
+<h1 align="center">FORMULARIO</h1>
+
+<h2 align="center">FORMULARIO DE LOKOSSSSS</h2>
+
+<p>Bienvenidos a la búsqueda de Pokemones de LOKOSSS</p>
+
+<form method="post" [formGroup]="formulario" (ngSubmit)="enviar()">
+  <div>
+    <label for="name-pokemon">Nombre: </label>
+    <input formControlName="name" type="text" id="name-pokemon" name="name" placeholder="Nombre" autocomplete="on" required>
+  </div>
+  <div>
+    <label for="category">Tipo: </label>
+    <select formControlName="category" id="category" name="tipo" required>
+      <option value="">Selecciona una opción</option>
+      <option value="fire">Fuego</option>
+      <option value="Grass">Planta</option>
+      <option value="water">Agua</option>
+      <option value="bug">Bicho</option>
+      <option value="dragon">Dragon</option>
+      <option value="electric">Eléctrico</option>
+      <option value="ice">Hielo</option>
+      <option value="steel">Acero</option>
+      <option value="normal">Normal</option>
+      <option value="flying">Volador</option>
+      <option value="ghost">Fantasma</option>
+      <option value="poison">Veneno</option>
+      <option value="fairy">Hada</option>
+      <option value="psychic">Psíquico</option>
+    </select>
+  </div>
+
+  <div class="button-form">
+    <button type="submit" [disabled]="formulario.invalid">Buscar</button>
+  </div>
+
+
+
+</form>
