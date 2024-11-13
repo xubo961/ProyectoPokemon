@@ -4,6 +4,7 @@ import {InformacionService} from '../services/modales/informacion.service';
 import {EnviarPokemonService} from '../services/pokemon/enviar-pokemon.service';
 import {PokemonApiService} from '../services/pokemon/pokemon-api.service';
 import {Router} from '@angular/router';
+import {PokemonDetailService} from '../services/pokemon/pokemon-detail.service';
 
 @Component({
   selector: 'app-informacion',
@@ -20,6 +21,7 @@ export class InformacionComponent implements OnInit{
     private informacionService: InformacionService,
     private enviarPokemonService: EnviarPokemonService,
     private  pokemonApiService: PokemonApiService,
+    private pokemonDetailService: PokemonDetailService,
     private router: Router
   ) {}
 
@@ -84,10 +86,8 @@ export class InformacionComponent implements OnInit{
       image_url: "https://vignette.wikia.nocookie.net/es.pokemon/images/b/bf/Mew.png/revision/latest?cb=20160311010530"}
   ]
 
-  deallesPokemon(nombre: string) {
-    //enviar el nombre
-    //a traves de BehaviourSubject al component
-    //pokemon-detail
+  deallesPokemon(pk: PokemonApi) {
+    this.pokemonDetailService.updatePokemon1(pk)
     this.router.navigate(['detalles']);
   }
 }

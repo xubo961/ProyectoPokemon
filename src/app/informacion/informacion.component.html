@@ -12,10 +12,9 @@
 <div class="pokemon-container" *ngIf="pokemonsApi.length > 0">
   <div *ngFor="let pokemon of pokemonsApi">
     <h2>{{pokemon.name}}</h2>
-    <button type="button" (click)="deallesPokemon(pokemon.name)">Ver Informacion</button>
-    <a href="{{pokemon.url}}" target="_blank">Ver información</a>
+    <button type="button" (click)="deallesPokemon(pokemon)">Ver Informacion</button>
+
   </div>
 </div>
 
 <app-modal *ngIf="mostrarModal"></app-modal>
-
